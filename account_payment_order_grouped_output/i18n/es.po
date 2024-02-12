@@ -25,8 +25,8 @@ msgstr "Línea de débito %s"
 #. module: account_payment_order_grouped_output
 #: code:addons/account_payment_order_grouped_output/models/account_payment_order.py:0
 #, python-format
-msgid "Debit order %s"
-msgstr "Orden de adeudo %s"
+msgid "Debit order"
+msgstr "Orden de adeudo"
 
 #. module: account_payment_order_grouped_output
 #: model:ir.model.fields,field_description:account_payment_order_grouped_output.field_account_move__display_name
@@ -105,8 +105,8 @@ msgstr "Línea bancaria de pago %s"
 #. module: account_payment_order_grouped_output
 #: code:addons/account_payment_order_grouped_output/models/account_payment_order.py:0
 #, python-format
-msgid "Payment order %s"
-msgstr "Orden de pago %s"
+msgid "Payment order"
+msgstr "Orden de pago"
 
 #. module: account_payment_order_grouped_output
 #: model:ir.model.fields,field_description:account_payment_order_grouped_output.field_account_payment_mode__post_move

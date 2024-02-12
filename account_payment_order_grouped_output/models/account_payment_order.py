@@ -87,16 +87,10 @@ class AccountPaymentOrder(models.Model):
         lines_to_rec.reconcile()
 
     def _prepare_move(self, payments=None):
-        if self.payment_type == "outbound":
-            ref = _("Payment order %s") % self.name
-        else:
-            ref = _("Debit order %s") % self.name
-        if payments and len(payments) == 1:
-            ref += " - " + payments.name
         vals = {
             "date": payments[0].date,
             "journal_id": self.journal_id.id,
-            "ref": ref,
+            "ref": self.name,
             "grouped_payment_order_id": self.id,
             "line_ids": [],
         }
@@ -118,14 +112,10 @@ class AccountPaymentOrder(models.Model):
             account = payment.journal_id.payment_debit_account_id
         else:
             account = payment.journal_id.payment_credit_account_id
-        if self.payment_type == "outbound":
-            name = _("Payment bank line %s") % payment.name
-        else:
-            name = _("Debit bank line %s") % payment.name
         sign = self.payment_type == "inbound" and -1 or 1
         amount_company_currency = abs(payment.move_id.line_ids[0].balance)
         vals = {
-            "name": name,
+            "name": payment.move_id.line_ids[0].name,
             "partner_id": payment.partner_id.id,
             "account_id": account.id,
             "credit": (
@@ -143,10 +133,10 @@ class AccountPaymentOrder(models.Model):
         self, amount_company_currency, amount_payment_currency, payments
     ):
         if self.payment_type == "outbound":
-            name = _("Payment order %s") % self.name
+            name = _("Payment order")
             account = self.journal_id.payment_credit_account_id
         else:
-            name = _("Debit order %s") % self.name
+            name = _("Debit order")
             account = self.journal_id.payment_debit_account_id
         partner = self.env["res.partner"]
         for index, payment in enumerate(payments):

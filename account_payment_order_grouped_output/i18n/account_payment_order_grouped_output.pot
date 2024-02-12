@@ -23,7 +23,7 @@ msgstr ""
 #: code:addons/account_payment_order_grouped_output/models/account_payment_order.py:0
 #: code:addons/account_payment_order_grouped_output/models/account_payment_order.py:0
 #, python-format
-msgid "Debit order %s"
+msgid "Debit order"
 msgstr ""
 
 #. module: account_payment_order_grouped_output
@@ -104,7 +104,7 @@ msgstr ""
 #: code:addons/account_payment_order_grouped_output/models/account_payment_order.py:0
 #: code:addons/account_payment_order_grouped_output/models/account_payment_order.py:0
 #, python-format
-msgid "Payment order %s"
+msgid "Payment order"
 msgstr ""
 
 #. module: account_payment_order_grouped_output

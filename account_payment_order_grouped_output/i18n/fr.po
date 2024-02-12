@@ -23,8 +23,8 @@ msgstr ""
 #. module: account_payment_order_grouped_output
 #: code:addons/account_payment_order_grouped_output/models/account_payment_order.py:0
 #, python-format
-msgid "Debit order %s"
-msgstr ""
+msgid "Debit order"
+msgstr "Ordre de débit"
 
 #. module: account_payment_order_grouped_output
 #: model:ir.model.fields,field_description:account_payment_order_grouped_output.field_account_move__display_name
@@ -92,7 +92,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_payment_order_grouped_output.field_account_move__grouped_payment_order_id
 #: model:ir.model.fields,field_description:account_payment_order_grouped_output.field_account_payment__grouped_payment_order_id
 msgid "Payment Order (Grouped)"
-msgstr ""
+msgstr "Ordre de paiement (groupé)"
 
 #. module: account_payment_order_grouped_output
 #: code:addons/account_payment_order_grouped_output/models/account_payment_order.py:0
@@ -103,8 +103,8 @@ msgstr ""
 #. module: account_payment_order_grouped_output
 #: code:addons/account_payment_order_grouped_output/models/account_payment_order.py:0
 #, python-format
-msgid "Payment order %s"
-msgstr ""
+msgid "Payment order"
+msgstr "Ordre de paiement (groupé)"
 
 #. module: account_payment_order_grouped_output
 #: model:ir.model.fields,field_description:account_payment_order_grouped_output.field_account_payment_mode__post_move
