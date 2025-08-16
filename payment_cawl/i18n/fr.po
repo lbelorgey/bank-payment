@@ -1,0 +1,419 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_cawl
+# 
+# Translators:
+# CAWL Payment Module Team, 2025
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-12 10:00+0000\n"
+"PO-Revision-Date: 2025-08-12 10:00+0000\n"
+"Last-Translator: CAWL Payment Module Team, 2025\n"
+"Language-Team: French (https://app.transifex.com/odoo/teams/41243/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#. module: payment_cawl
+#: model:ir.model.fields,field_description:payment_cawl.field_payment_provider__cawl_pspid
+msgid "PSPID"
+msgstr "PSPID"
+
+#. module: payment_cawl
+#: model:ir.model.fields,field_description:payment_cawl.field_payment_provider__cawl_api_key
+msgid "CAWL API Key"
+msgstr "Clé API CAWL"
+
+#. module: payment_cawl
+#: model:ir.model.fields,field_description:payment_cawl.field_payment_provider__cawl_api_secret
+msgid "CAWL API Secret"
+msgstr "Secret API CAWL"
+
+#. module: payment_cawl
+#: model:ir.model.fields,field_description:payment_cawl.field_payment_provider__cawl_webhook_key
+msgid "Webhook Key"
+msgstr "Clé Webhook"
+
+#. module: payment_cawl
+#: model:ir.model.fields,field_description:payment_cawl.field_payment_provider__cawl_webhook_secret
+msgid "Webhook Secret"
+msgstr "Secret Webhook"
+
+#. module: payment_cawl
+#: model:ir.model.fields,field_description:payment_cawl.field_payment_provider__cawl_server_url
+msgid "Server Environment"
+msgstr "Environnement du serveur"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_provider__cawl_api_key
+msgid "Your CAWL API key for authentication"
+msgstr "Votre clé API CAWL pour l'authentification"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_provider__cawl_api_secret
+msgid "Your CAWL API secret for authentication"
+msgstr "Votre secret API CAWL pour l'authentification"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_provider__cawl_webhook_key
+msgid "Your CAWL webhook key for identification"
+msgstr "Votre clé webhook CAWL pour l'identification"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_provider__cawl_webhook_secret
+msgid "Secret key for verifying webhook signatures from CAWL"
+msgstr "Clé secrète pour vérifier les signatures des webhooks CAWL"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_provider__cawl_server_url
+msgid "Select the CAWL environment (sandbox or production)"
+msgstr "Sélectionnez l'environnement CAWL (sandbox ou production)"
+
+#. module: payment_cawl
+#: model_terms:ir.ui.view,arch_db:payment_cawl.payment_provider_form_cawl
+msgid "API Credentials"
+msgstr "Identifiants API"
+
+#. module: payment_cawl
+#: model_terms:ir.ui.view,arch_db:payment_cawl.payment_provider_form_cawl
+msgid "Connection Test"
+msgstr "Test de connexion"
+
+#. module: payment_cawl
+#: model_terms:ir.ui.view,arch_db:payment_cawl.payment_provider_form_cawl
+msgid "Test Connection"
+msgstr "Tester la connexion"
+
+#. module: payment_cawl
+#: model_terms:ir.ui.view,arch_db:payment_cawl.payment_provider_form_cawl
+msgid "Test your CAWL API credentials and connection to verify the configuration is working correctly."
+msgstr "Testez vos identifiants API CAWL et votre connexion pour vérifier que la configuration fonctionne correctement."
+
+#. module: payment_cawl
+#: model_terms:ir.ui.view,arch_db:payment_cawl.payment_provider_form_cawl
+msgid "Build:"
+msgstr "Build :"
+
+#. module: payment_cawl
+#: model_terms:ir.ui.view,arch_db:payment_cawl.payment_provider_form_cawl
+msgid "Build Date:"
+msgstr "Date de build :"
+
+#. module: payment_cawl
+#: model_terms:ir.ui.view,arch_db:payment_cawl.payment_provider_form_cawl
+msgid "Payment flow working"
+msgstr "Flux de paiement fonctionnel"
+
+#. module: payment_cawl
+#: model_terms:ir.ui.view,arch_db:payment_cawl.payment_provider_form_cawl
+msgid "Template-based approach"
+msgstr "Approche basée sur les modèles"
+
+#. module: payment_cawl
+#: model_terms:ir.ui.view,arch_db:payment_cawl.payment_provider_form_cawl
+msgid "Ready for refunds"
+msgstr "Prêt pour les remboursements"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "CAWL SDK not available. Please install: pip install onlinepayments-sdk-python3"
+msgstr "SDK CAWL non disponible. Veuillez installer : pip install onlinepayments-sdk-python3"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "Please configure all CAWL credentials first:\n• PSPID (Merchant ID)\n• API Key\n• API Secret"
+msgstr "Veuillez d'abord configurer tous les identifiants CAWL :\n• PSPID (ID du marchand)\n• Clé API\n• Secret API"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "✅ Connection Test Successful"
+msgstr "✅ Test de connexion réussi"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "Connection test failed: %s"
+msgstr "Test de connexion échoué : %s"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "API endpoint is missing"
+msgstr "Le point de terminaison API est manquant"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "API key is required"
+msgstr "La clé API est requise"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "API secret is required"
+msgstr "Le secret API est requis"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "Invalid API credentials. Please check your Merchant ID, API Key, and API Secret."
+msgstr "Identifiants API invalides. Veuillez vérifier votre ID marchand, votre clé API et votre secret API."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "Authentication failed. Please check your API credentials."
+msgstr "L'authentification a échoué. Veuillez vérifier vos identifiants API."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "Request timeout. Please check your internet connection and try again."
+msgstr "Délai de requête dépassé. Veuillez vérifier votre connexion internet et réessayer."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "Network connection failed. Please check:\n• Internet connection is working\n• Firewall allows outbound HTTPS connections\n• CAWL servers are accessible"
+msgstr "La connexion réseau a échoué. Veuillez vérifier :\n• La connexion internet fonctionne\n• Le pare-feu autorise les connexions HTTPS sortantes\n• Les serveurs CAWL sont accessibles"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "SSL/Certificate error. Please check:\n• System date and time are correct\n• SSL certificates are up to date\n• Network proxy settings if applicable"
+msgstr "Erreur SSL/Certificat. Veuillez vérifier :\n• La date et l'heure système sont correctes\n• Les certificats SSL sont à jour\n• Les paramètres de proxy réseau si applicable"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "Server URL is required for CAWL provider."
+msgstr "L'URL du serveur est requise pour le fournisseur CAWL."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "CAWL SDK not available. Please install dependencies."
+msgstr "SDK CAWL non disponible. Veuillez installer les dépendances."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "Payment service configuration error. Please contact support."
+msgstr "Erreur de configuration du service de paiement. Veuillez contacter le support."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "Unable to connect to payment service. Please check your internet connection and try again."
+msgstr "Impossible de se connecter au service de paiement. Veuillez vérifier votre connexion internet et réessayer."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "This currency is not supported for CAWL payments."
+msgstr "Cette devise n'est pas prise en charge pour les paiements CAWL."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "Invalid payment amount. Please check the order total and try again."
+msgstr "Montant de paiement invalide. Veuillez vérifier le total de la commande et réessayer."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "Payment gateway error: %s"
+msgstr "Erreur de la passerelle de paiement : %s"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "Payment service is temporarily unavailable. Please try again later or contact support."
+msgstr "Le service de paiement est temporairement indisponible. Veuillez réessayer plus tard ou contacter le support."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "Customer information is incomplete. Please verify your details and try again."
+msgstr "Les informations client sont incomplètes. Veuillez vérifier vos détails et réessayer."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "Unable to create payment session. Please try again or contact support."
+msgstr "Impossible de créer la session de paiement. Veuillez réessayer ou contacter le support."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "CAWL SDK not available for payment capture"
+msgstr "SDK CAWL non disponible pour la capture de paiement"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "No CAWL payment ID found for capture"
+msgstr "Aucun ID de paiement CAWL trouvé pour la capture"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "Payment not found. Cannot capture."
+msgstr "Paiement introuvable. Impossible de capturer."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "Invalid capture amount. Please check the amount and try again."
+msgstr "Montant de capture invalide. Veuillez vérifier le montant et réessayer."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "Payment capture error: %s"
+msgstr "Erreur de capture de paiement : %s"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "Refund not allowed: %s"
+msgstr "Remboursement non autorisé : %s"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "No CAWL payment ID found for refund"
+msgstr "Aucun ID de paiement CAWL trouvé pour le remboursement"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "Invalid refund amount. Please check the amount and try again."
+msgstr "Montant de remboursement invalide. Veuillez vérifier le montant et réessayer."
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_transaction.py:0
+#, python-format
+msgid "Refund not allowed on this transaction. The payment may not be settled yet or refunds may not be supported for this payment method. Please contact support."
+msgstr "Remboursement non autorisé sur cette transaction. Le paiement n'est peut-être pas encore réglé ou les remboursements ne sont pas pris en charge pour cette méthode de paiement. Veuillez contacter le support."
+
+#. module: payment_cawl
+#: model:ir.model.fields,field_description:payment_cawl.field_payment_transaction__cawl_payment_id
+msgid "CAWL Payment ID"
+msgstr "ID de paiement CAWL"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_transaction__cawl_payment_id
+msgid "The CAWL payment ID for this transaction"
+msgstr "L'ID de paiement CAWL pour cette transaction"
+
+#. module: payment_cawl
+#: model:ir.model.fields,field_description:payment_cawl.field_payment_transaction__last_state_change
+msgid "Last State Change"
+msgstr "Dernier changement d'état"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_transaction__last_state_change
+msgid "Timestamp of the last state change for this transaction"
+msgstr "Horodatage du dernier changement d'état pour cette transaction"
+
+#. module: payment_cawl
+#: model:ir.module,name:payment_cawl.module_payment_cawl
+msgid "CAWL Payment Provider"
+msgstr "Fournisseur de paiement CAWL"
+
+#. module: payment_cawl
+#: model:ir.module.summary,name:payment_cawl.module_payment_cawl
+msgid "Accept payments through CAWL payment gateway"
+msgstr "Accepter les paiements via la passerelle de paiement CAWL"
+
+#. module: payment_cawl
+#: model:ir.module.description,name:payment_cawl.module_payment_cawl
+msgid "This module allows you to accept payments through CAWL payment gateway. It supports hosted checkout, automatic capture, refunds, and webhook processing."
+msgstr "Ce module vous permet d'accepter les paiements via la passerelle de paiement CAWL. Il prend en charge le checkout hébergé, la capture automatique, les remboursements et le traitement des webhooks."
+
+#. module: payment_cawl
+#: model_terms:ir.ui.view,arch_db:payment_cawl.payment_provider_form_cawl
+msgid "Build Information"
+msgstr "Informations de build"
+
+#. module: payment_cawl
+#: model:ir.model.fields,field_description:payment_cawl.field_payment_provider__cawl_use_product_filter
+msgid "Filter Payment Products"
+msgstr "Filtrer les produits de paiement"
+
+#. module: payment_cawl
+#: model:ir.model.fields,field_description:payment_cawl.field_payment_provider__cawl_allowed_product_ids
+msgid "Allowed Payment Products"
+msgstr "Produits de paiement autorisés"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_provider__cawl_use_product_filter
+msgid "Enable to restrict payment methods to selected products only"
+msgstr "Activer pour restreindre les méthodes de paiement aux produits sélectionnés uniquement"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_provider__cawl_allowed_product_ids
+msgid "Select which payment products to show in hosted checkout. Leave empty to show all available products."
+msgstr "Sélectionnez quels produits de paiement afficher dans le checkout hébergé. Laissez vide pour afficher tous les produits disponibles."
+
+#. module: payment_cawl
+#: model_terms:ir.ui.view,arch_db:payment_cawl.payment_provider_form_cawl
+msgid "Product Configuration"
+msgstr "Configuration des produits"
+
+#. module: payment_cawl
+#: model_terms:ir.ui.view,arch_db:payment_cawl.payment_provider_form_cawl
+msgid "Sync Payment Products"
+msgstr "Synchroniser les produits de paiement"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "Success"
+msgstr "Succès"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "Payment products synchronized successfully"
+msgstr "Produits de paiement synchronisés avec succès"
+
+#. module: payment_cawl
+#: code:addons/payment_cawl/models/payment_provider.py:0
+#, python-format
+msgid "Failed to sync payment products: %s"
+msgstr "Échec de la synchronisation des produits de paiement : %s"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_provider__cawl_pspid
+msgid "CAWL PSPID (Payment Service Provider ID) from your CAWL account"
+msgstr "PSPID CAWL (ID du fournisseur de service de paiement) depuis votre compte CAWL"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_provider__cawl_api_key
+msgid "CAWL API Key for authentication"
+msgstr "Clé API CAWL pour l'authentification"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_provider__cawl_api_secret
+msgid "CAWL API Secret for authentication"
+msgstr "Secret API CAWL pour l'authentification"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_provider__cawl_webhook_key
+msgid "CAWL Webhook Key for identification"
+msgstr "Clé Webhook CAWL pour l'identification"
+
+#. module: payment_cawl
+#: model:ir.model.fields,help:payment_cawl.field_payment_provider__cawl_webhook_secret
+msgid "Secret key for verifying webhook signatures from CAWL"
+msgstr "Clé secrète pour vérifier les signatures des webhooks CAWL"

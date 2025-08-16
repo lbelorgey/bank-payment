@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="payment_provider_form_cawl" model="ir.ui.view">
+            <field name="name">Cawl Provider Form</field>
+            <field name="model">payment.provider</field>
+            <field name="inherit_id" ref="payment.payment_provider_form"/>
+            <field name="arch" type="xml">
+                
+                <!-- Add CAWL credentials to existing credentials tab -->
+                <group name="provider_credentials" position="before">
+                    <group string="API Credentials" attrs="{'invisible': [('code', '!=', 'cawl')]}">
+                        <field name="cawl_pspid"
+                               attrs="{'required': [('code', '=', 'cawl'), ('state', '!=', 'disabled')]}"/>
+                        <field name="cawl_api_key"
+                               attrs="{'required': [('code', '=', 'cawl'), ('state', '!=', 'disabled')]}"/>
+                        <field name="cawl_api_secret"
+                               attrs="{'required': [('code', '=', 'cawl'), ('state', '!=', 'disabled')]}"
+                               password="True"/>
+                        <field name="cawl_webhook_key"
+                               attrs="{'required': [('code', '=', 'cawl'), ('state', '!=', 'disabled')]}"/>
+                        <field name="cawl_webhook_secret"
+                               attrs="{'required': [('code', '=', 'cawl'), ('state', '!=', 'disabled')]}"
+                               password="True"/>
+                        <field name="cawl_server_url"
+                               attrs="{'required': [('code', '=', 'cawl'), ('state', '!=', 'disabled')]}"/>
+                    </group>
+                    <group string="Connection Test" attrs="{'invisible': [('code', '!=', 'cawl')]}">
+                        <div style="padding: 10px 0;">
+                            <div style="margin-bottom: 15px;">
+                                <button name="action_test_cawl_connection" 
+                                        type="object" 
+                                        string="Test Connection" 
+                                        class="btn btn-secondary"
+                                        icon="fa-plug"
+                                        style="margin-right: 15px;"
+                                        attrs="{'invisible': [('code', '!=', 'cawl')]}"/>
+                            </div>
+                        </div>
+                    </group>
+                    <group string="Product Configuration" attrs="{'invisible': [('code', '!=', 'cawl')]}">
+                        <field name="cawl_use_product_filter"/>
+                        <field name="cawl_allowed_product_ids" 
+                                attrs="{'invisible': [('cawl_use_product_filter', '=', False)]}"
+                                widget="many2many_tags"/>
+                        <button name="action_sync_payment_products" 
+                                type="object" 
+                                string="Sync Payment Products" 
+                                class="btn-secondary"
+                                attrs="{'invisible': [('code', '!=', 'cawl')]}"/>
+                    </group>
+                </group>
+            </field>
+        </record>
+    </data>
+</odoo>

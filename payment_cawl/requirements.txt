@@ -1,0 +1,2 @@
+# CAWL Payment Provider Dependencies
+onlinepayments-sdk-python3>=5.0.0

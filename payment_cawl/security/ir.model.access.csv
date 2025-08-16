@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_payment_provider_cawl,payment.provider.cawl,payment.model_payment_provider,base.group_system,1,1,1,1
+access_payment_transaction_cawl,payment.transaction.cawl,payment.model_payment_transaction,base.group_system,1,1,1,1
+access_cawl_payment_product,cawl.payment.product,payment_cawl.model_cawl_payment_product,base.group_system,1,1,1,1
