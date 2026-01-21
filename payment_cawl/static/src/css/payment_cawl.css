@@ -2,31 +2,31 @@
 
 /* Loading States */
 .cawl-loading {
-  text-align: center;
-  padding: 20px;
+    text-align: center;
+    padding: 20px;
 }
 
 .cawl-loading .spinner-border {
-  width: 3rem;
-  height: 3rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
-  .cawl-loading {
-    padding: 15px;
-  }
+    .cawl-loading {
+        padding: 15px;
+    }
 }
 
 /* Accessibility */
 .cawl-loading .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }

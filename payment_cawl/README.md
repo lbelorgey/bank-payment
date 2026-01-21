@@ -1,16 +1,20 @@
 # CAWL Payment Module for Odoo
 
-A comprehensive payment module for Odoo e-commerce that integrates with CAWL's hosted checkout solution.
+A comprehensive payment module for Odoo e-commerce that integrates with CAWL's hosted
+checkout solution.
 
 ## 🚀 Features
 
 ### Core Payment Integration
 
 - **Hosted Checkout**: Secure payment processing through CAWL's hosted payment pages
-- **Multi-Currency Support**: Supports 32+ currencies including EUR, USD, GBP, CHF, CAD, JPY, etc.
-- **Automatic Order Confirmation**: Sales orders are automatically confirmed upon successful payment
+- **Multi-Currency Support**: Supports 32+ currencies including EUR, USD, GBP, CHF, CAD,
+  JPY, etc.
+- **Automatic Order Confirmation**: Sales orders are automatically confirmed upon
+  successful payment
 - **Webhook Processing**: Real-time transaction status updates via webhooks
-- **Payment Method Line Management**: Automatic creation and management of payment method lines
+- **Payment Method Line Management**: Automatic creation and management of payment
+  method lines
 
 ### Advanced Configuration
 
@@ -39,7 +43,7 @@ addons/payment_cawl/
 │   ├── __init__.py
 │   └── controllers.py          # Webhook and return URL handling
 ├── data/
-│   └── payment_method_data.xml # Payment method definitions
+│   └── payment_provider_data.xml # Payment method definitions
 ├── models/
 │   ├── __init__.py
 │   ├── payment_provider.py     # CAWL provider configuration
@@ -149,7 +153,8 @@ Use the provided `clear_cache.sh` script to clear Odoo caches during development
 
 - **Connection Test**: Use the "Test Connection" button in provider configuration
 - **Manual Status Update**: Use `/payment/cawl/update_status/<tx_id>?status=PAID`
-- **Webhook Testing**: Use `/payment/cawl/test_webhook` for webhook accessibility testing
+- **Webhook Testing**: Use `/payment/cawl/test_webhook` for webhook accessibility
+  testing
 
 ### Debugging
 
@@ -201,4 +206,5 @@ docker compose logs web --follow
 
 ## 📄 License
 
-This module is provided as-is for integration with CAWL payment services. Ensure compliance with CAWL's terms of service and Odoo's licensing requirements.
+This module is provided as-is for integration with CAWL payment services. Ensure
+compliance with CAWL's terms of service and Odoo's licensing requirements.

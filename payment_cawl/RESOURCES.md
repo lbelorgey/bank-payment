@@ -1,6 +1,7 @@
 # External Resources & References
 
-This document lists the key external resources used for developing and maintaining the CAWL payment module.
+This document lists the key external resources used for developing and maintaining the
+CAWL payment module.
 
 ## 🔗 Official CAWL Documentation
 
@@ -16,7 +17,8 @@ This document lists the key external resources used for developing and maintaini
 
 ### Integration Guides
 
-- **Hosted Checkout Guide**: https://docs.ecommerce.cawl-solutions.fr/fr/integration/basic-integration-methods/hosted-checkout-page
+- **Hosted Checkout Guide**:
+  https://docs.ecommerce.cawl-solutions.fr/fr/integration/basic-integration-methods/hosted-checkout-page
 - **Purpose**: Step-by-step integration guide for hosted checkout
 - **Key Features**:
   - Language localization (fr_FR, en_US, etc.)

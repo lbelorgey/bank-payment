@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="payment_provider_cawl" model="payment.provider">
+        <field name="code">cawl</field>
+        <field name="name">CAWL</field>
+        <field name="sequence">20</field>
+        <field name="state">disabled</field>
+        <field name="is_published">False</field>
+        <field name="company_id" ref="base.main_company" />
+        <field name="cawl_server_url">sandbox</field>
+        <!-- Journal will be set manually by user -->
+    </record>
+
+</odoo>

@@ -1,26 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <data>
-        
-        <!-- Redirect Form Template -->
-        <template id="redirect_form" name="CAWL Payment Redirect Form">
-            <form t-att-action="api_url" method="post">
-                <!-- CAWL-specific hidden fields -->
-                <input type="hidden" name="merchantId" t-att-value="cawl_pspid"/>
-                <input type="hidden" name="amount" t-att-value="int(amount * 100)"/>
-                <input type="hidden" name="currencyCode" t-att-value="currency.name"/>
-                <input type="hidden" name="merchantReference" t-att-value="reference"/>
-                <input type="hidden" name="returnUrl" t-att-value="return_url"/>
-                
-                <!-- Loading state -->
-                <div class="cawl-loading">
-                    <div class="spinner-border text-primary" role="status">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                    <p class="mt-2">Redirecting to secure payment page...</p>
+
+    <template id="redirect_form" name="CAWL Payment Redirect Form">
+        <form t-att-action="api_url" method="post">
+            <!-- CAWL-specific hidden fields -->
+            <input type="hidden" name="merchantId" t-att-value="cawl_pspid"/>
+            <input type="hidden" name="amount" t-att-value="int(amount * 100)"/>
+            <input type="hidden" name="currencyCode" t-att-value="currency.name"/>
+            <input type="hidden" name="merchantReference" t-att-value="reference"/>
+            <input type="hidden" name="returnUrl" t-att-value="return_url"/>
+
+            <!-- Loading state -->
+            <div class="cawl-loading">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
                 </div>
-            </form>
-        </template>
-        
-    </data>
+                <p class="mt-2">Redirecting to secure payment page...</p>
+            </div>
+        </form>
+    </template>
+
 </odoo>
