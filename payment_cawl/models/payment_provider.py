@@ -7,6 +7,7 @@ _logger = logging.getLogger(__name__)
 
 # Check CAWL SDK availability
 try:
+    import onlinepayments
     CAWL_SDK_AVAILABLE = True
 except ImportError:
     CAWL_SDK_AVAILABLE = False
@@ -482,6 +483,14 @@ class PaymentProvider(models.Model):
             )
         else:
             return error_string
+
+    def _get_redirect_form_view(self, is_validation=False):
+        """For CAWL hosted checkout, we use a simple redirect template."""
+
+        if self.code != "cawl":
+            return super()._get_redirect_form_view(is_validation)
+
+        return self.env.ref('payment_cawl.redirect_form')
 
     def _should_build_inline_form(self, is_validation=False):
         """For CAWL hosted checkout, we always use redirect, so return False."""
