@@ -500,7 +500,7 @@ class PaymentTransaction(models.Model):
         """Process CAWL webhook notification data."""
 
         super()._process_notification_data(notification_data)
-        if self.provider_code != 'cawl':
+        if self.provider_code != "cawl":
             return
 
         # Extract webhook type

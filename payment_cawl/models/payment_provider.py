@@ -486,8 +486,8 @@ class PaymentProvider(models.Model):
     def _should_build_inline_form(self, is_validation=False):
         """For CAWL hosted checkout, we always use redirect, so return False."""
 
-        if self.provider_code != 'cawl':
-            super()._should_build_inline_form(is_validation)
+        if self.code != "cawl":
+            return super()._should_build_inline_form(is_validation)
 
         return False
 
