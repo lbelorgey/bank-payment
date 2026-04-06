@@ -702,7 +702,7 @@ class PaymentTransaction(models.Model):
             return
 
         # Map CAWL status values to transaction states
-        if status in ["CAPTURED", "PAID"]:
+        if status in ["CAPTURED", "PAID", "CAPTURE_REQUESTED"]:
             # Payment successful and captured - set to done
             if self.state != "done":
                 # Don't update payment ID - keep the original one
